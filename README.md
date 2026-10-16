@@ -34,7 +34,7 @@ hugo --gc --minify --environment production
 python scripts/check_site.py
 ```
 
-`public/` 为生成文件，不提交到 Git。GitHub Actions 对 PR 执行构建与链接检查；推送到 `main` 后自动部署。Pages 的发布来源应为 **GitHub Actions**。
+`public/` 为生成文件，不提交到 Git。GitHub Actions 对分支推送和 PR 执行构建与链接检查；只有 `main` 会部署。Pages 的发布来源应为 **GitHub Actions**。
 
 ## 分支
 
