@@ -24,4 +24,12 @@
 
 本站尚未配置邮箱、CSDN、独立网页编辑器、评论或访问统计。当前网页写作入口是 GitHub 自带的文件编辑器。
 
-远程部署结果以仓库 Actions 中 `Build and deploy blog` 的实际运行记录为准。
+## 首次远程部署
+
+- 提交 `a7238d8` 已推送到 `main` 和 `feat/blog-bootstrap`。
+- Pages 发布来源已设为 `workflow`，HTTPS 已开启。
+- [首次 Hugo 构建与部署](https://github.com/xUxIAOrUI815/xuxiaorui815.github.io/actions/runs/38929592249) 的 build、deploy 均成功。
+- 公网 `/`、`/posts/hello-world/`、`/posts/markdown-example/`、`/search/`、`/index.json`、`/index.xml` 均返回 HTTP 200；首页内容与 Hugo 文章路径匹配，搜索索引包含两篇文章。
+- 内置浏览器访问公网页面超时，因此视觉与交互检查采用前述本地浏览器结果；公网连通性使用独立 HTTP 请求验证。
+
+之后的部署结果以仓库 Actions 中 `Build and deploy blog` 的实际运行记录为准。
