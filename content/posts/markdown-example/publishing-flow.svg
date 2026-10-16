@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="168" viewBox="0 0 720 168" role="img" aria-labelledby="title desc">
+  <title id="title">博客发布流程</title>
+  <desc id="desc">Markdown 写作，GitHub 提交，Hugo 构建，GitHub Pages 发布。</desc>
+  <rect width="720" height="168" rx="12" fill="#f5f5f5"/>
+  <g fill="#fff" stroke="#d6d6d6">
+    <rect x="24" y="48" width="144" height="72" rx="8"/>
+    <rect x="200" y="48" width="144" height="72" rx="8"/>
+    <rect x="376" y="48" width="144" height="72" rx="8"/>
+    <rect x="552" y="48" width="144" height="72" rx="8"/>
+  </g>
+  <g fill="#1e1e1e" font-family="system-ui, sans-serif" font-size="17" text-anchor="middle">
+    <text x="96" y="91">Markdown</text>
+    <text x="272" y="91">GitHub</text>
+    <text x="448" y="91">Hugo</text>
+    <text x="624" y="91">Pages</text>
+  </g>
+  <g fill="none" stroke="#6c6c6c" stroke-width="2">
+    <path d="M175 84h18m-6-6 6 6-6 6"/>
+    <path d="M351 84h18m-6-6 6 6-6 6"/>
+    <path d="M527 84h18m-6-6 6 6-6 6"/>
+  </g>
+</svg>

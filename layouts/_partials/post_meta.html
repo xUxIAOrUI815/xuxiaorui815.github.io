@@ -1,0 +1,11 @@
+{{- if not .Date.IsZero -}}
+<span title="{{ .Date }}">Date: {{ .Date.Format (default "January 2, 2006" site.Params.DateFormat) }}</span>
+{{- end -}}
+{{- if (.Param "ShowReadingTime") }}
+<span> | Estimated Reading Time: {{ .ReadingTime }} min</span>
+{{- end -}}
+{{- if not (.Param "hideAuthor") -}}
+  {{- with (partial "author.html" .) }}
+<span> | Author: {{ . }}</span>
+  {{- end -}}
+{{- end -}}

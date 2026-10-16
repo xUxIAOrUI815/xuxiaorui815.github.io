@@ -1,0 +1,109 @@
+baseURL = 'https://xuxiaorui815.github.io/'
+title = 'Rui’s Notes'
+theme = 'PaperMod'
+locale = 'zh-CN'
+defaultContentLanguage = 'zh'
+hasCJKLanguage = true
+timeZone = 'Asia/Shanghai'
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[pagination]
+  pagerSize = 10
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+[taxonomies]
+  tag = 'tags'
+
+[permalinks]
+  posts = '/posts/:slug/'
+
+[params]
+  env = 'production'
+  description = 'Xiaorui Xu 的个人博客，记录软件工程、AI 与学习笔记。'
+  author = 'Xiaorui Xu'
+  keywords = ['Xiaorui Xu', 'Blog', '软件工程', 'AI', '学习笔记']
+  mainSections = ['posts']
+  defaultTheme = 'light'
+  disableThemeToggle = false
+  DateFormat = 'January 2, 2006'
+  ShowReadingTime = true
+  ShowWordCount = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowShareButtons = false
+  ShowToc = true
+  TocOpen = true
+  comments = false
+  hideSummary = false
+  disableSpecial1stPost = true
+
+  [params.homeInfoParams]
+    Title = '👋 Welcome to Rui’s Notes'
+    Content = 'Hi, this is Xiaorui. 这里记录我的软件工程、AI 与学习笔记。'
+
+  [[params.socialIcons]]
+    name = 'github'
+    title = 'GitHub'
+    url = 'https://github.com/xUxIAOrUI815'
+  [[params.socialIcons]]
+    name = 'rss'
+    title = 'RSS'
+    url = '/index.xml'
+
+  [params.assets]
+    favicon = '/favicon.svg'
+    favicon16x16 = '/favicon-16x16.png'
+    favicon32x32 = '/favicon-32x32.png'
+    apple_touch_icon = '/apple-touch-icon.png'
+    safari_pinned_tab = '/favicon.svg'
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    ignoreLocation = true
+    threshold = 0.3
+    minMatchCharLength = 2
+    keys = ['title', 'permalink', 'summary', 'content']
+
+[[menus.main]]
+  name = 'Posts'
+  url = '/'
+  weight = 10
+[[menus.main]]
+  name = 'Archive'
+  url = '/archives/'
+  weight = 20
+[[menus.main]]
+  name = 'Search'
+  url = '/search/'
+  weight = 30
+[[menus.main]]
+  name = 'Tags'
+  url = '/tags/'
+  weight = 40
+[[menus.main]]
+  name = 'FAQ'
+  url = '/faq/'
+  weight = 50
+
+[markup.highlight]
+  noClasses = false
+  lineNos = false
+
+[markup.goldmark.renderer]
+  unsafe = false
+
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 3
+  ordered = false
+
+[caches.images]
+  dir = ':cacheDir/images'

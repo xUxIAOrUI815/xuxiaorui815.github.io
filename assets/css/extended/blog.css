@@ -1,0 +1,46 @@
+/* Small overrides keep the layout close to Lilian Weng's PaperMod site.
+   Keep theme sources untouched so future updates remain straightforward. */
+body {
+  font-size: 16px;
+}
+
+.home-info {
+  min-height: unset;
+}
+
+.home-info .entry-content {
+  margin: 14px 0;
+}
+
+.home-info .entry-content p {
+  margin: 0;
+}
+
+.post-entry:hover,
+.post-entry:focus-within {
+  transform: none;
+}
+
+.post-content {
+  line-height: 1.8;
+}
+
+.post-content a {
+  text-underline-offset: 3px;
+}
+
+.post-meta,
+.entry-footer {
+  overflow-wrap: anywhere;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .home-info {
+    min-height: 260px;
+  }
+}
