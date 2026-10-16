@@ -36,6 +36,8 @@ python scripts/check_site.py
 
 `public/` 为生成文件，不提交到 Git。GitHub Actions 对分支推送和 PR 执行构建与链接检查；只有 `main` 会部署。Pages 的发布来源应为 **GitHub Actions**。
 
+首版已部署成功，但本次未观察到 Git 推送自动触发运行；原因尚未确定。当前可用 `gh workflow run pages.yaml --ref main` 手动发布，详见[验证记录](docs/validation.md)。
+
 ## 分支
 
 - `main`：发布分支。

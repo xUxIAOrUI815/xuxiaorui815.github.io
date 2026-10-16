@@ -46,6 +46,14 @@ hugo server -D
 
 提交成功与部署成功是两个状态：请在仓库的 **Actions → Build and deploy blog** 中确认绿色成功标记，然后访问网站。
 
+首版验证中，工作流手动执行成功，但几次 Git 推送后没有观察到 `push` 事件运行，原因尚未确定。因此暂时不要只凭提交成功就判断文章已上线。如果 Actions 没有出现新的运行，在仓库目录执行：
+
+```sh
+gh workflow run pages.yaml --ref main
+```
+
+也可以在 GitHub 的 **Actions → Build and deploy blog → Run workflow** 中选择 `main`。需要本机 `gh` 已登录 GitHub。推送自动触发的配置已保留，待后续确认恢复。
+
 ## 4. 调整网站
 
 | 要修改什么 | 文件 |
