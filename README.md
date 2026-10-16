@@ -1,5 +1,7 @@
 # Rui’s Notes
 
+[![Build and deploy blog](https://github.com/xUxIAOrUI815/xuxiaorui815.github.io/actions/workflows/pages.yaml/badge.svg)](https://github.com/xUxIAOrUI815/xuxiaorui815.github.io/actions/workflows/pages.yaml)
+
 Xiaorui Xu 的个人博客。使用 **Hugo + PaperMod + GitHub Pages**，页面结构参考 [Lilian Weng 的 Lil’Log](https://lilianweng.github.io/)。
 
 - 网站：<https://xuxiaorui815.github.io/>
