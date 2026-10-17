@@ -56,6 +56,10 @@ buildExpired = false
     name = 'csdn'
     title = 'CSDN 主页'
     url = 'https://blog.csdn.net/KRADDDD?type=blog'
+  [[params.socialIcons]]
+    name = 'rss'
+    title = 'RSS 订阅'
+    url = 'https://xuxiaorui815.github.io/index.xml'
 
   [params.assets]
     favicon = '/favicon.svg'
