@@ -64,7 +64,7 @@ gh workflow run pages.yaml --ref main
 | 文章元信息展示 | `layouts/_partials/post_meta.html` |
 | 自动构建和部署 | `.github/workflows/pages.yaml` |
 
-站名暂定为 **Rui’s Notes**，可以随时调整；它不影响 `xuxiaorui815.github.io` 域名。
+站名为 **RuiNote**；它不影响 `xuxiaorui815.github.io` 域名。
 
 ## 5. 删除示例与回退
 

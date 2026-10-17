@@ -1,6 +1,6 @@
 +++
 title = 'FAQ'
-description = '关于 Rui’s Notes 的几个问题。'
+description = '关于 RuiNote 的几个问题。'
 ShowToc = false
 hideMeta = true
 searchHidden = true
@@ -13,9 +13,9 @@ hiddenInRss = true
 
 你可以在 [GitHub](https://github.com/xUxIAOrUI815) 找到我的项目。
 
-## 为什么叫 Rui’s Notes？
+## 为什么叫 RuiNote？
 
-先从持续记录开始。这个名字是博客第一版的暂定名称，之后会逐步完善内容和样式。
+Rui 来自我的名字，Note 代表持续记录与整理。这里用来留下学习中的问题、思考与实践。
 
 ## 怎样订阅？
 
