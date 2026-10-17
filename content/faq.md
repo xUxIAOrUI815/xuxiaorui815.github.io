@@ -1,6 +1,6 @@
 +++
 title = 'FAQ'
-description = '关于 RuiNote 的几个问题。'
+description = '关于 Ruii’s Margins 的几个问题。'
 ShowToc = false
 hideMeta = true
 searchHidden = true
@@ -13,9 +13,9 @@ hiddenInRss = true
 
 你可以在 [GitHub](https://github.com/xUxIAOrUI815) 找到我的项目。
 
-## 为什么叫 RuiNote？
+## 为什么叫 Ruii’s Margins？
 
-Rui 来自我的名字，Note 代表持续记录与整理。这里用来留下学习中的问题、思考与实践。
+Ruii 是 Rui 的一个小变体，Margins 意为“页边”。这里像一本持续写下去的页边笔记，记录阅读、代码与学习中的思考。
 
 ## 怎样订阅？
 

@@ -1,4 +1,4 @@
-# RuiNote
+# Ruii’s Margins
 
 [![Build and deploy blog](https://github.com/xUxIAOrUI815/xuxiaorui815.github.io/actions/workflows/pages.yaml/badge.svg)](https://github.com/xUxIAOrUI815/xuxiaorui815.github.io/actions/workflows/pages.yaml)
 

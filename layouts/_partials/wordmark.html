@@ -1,0 +1,2 @@
+{{- $words := split . " " -}}
+<strong>{{ index $words 0 }}</strong>{{ with after 1 $words }}<span> {{ delimit . " " }}</span>{{ end }}

@@ -1,5 +1,5 @@
 baseURL = 'https://xuxiaorui815.github.io/'
-title = 'RuiNote'
+title = 'Ruii’s Margins'
 theme = 'PaperMod'
 locale = 'zh-CN'
 defaultContentLanguage = 'zh'
@@ -45,7 +45,7 @@ buildExpired = false
   disableSpecial1stPost = true
 
   [params.homeInfoParams]
-    Title = '👋 Welcome to RuiNote'
+    Title = '👋 Welcome to **Ruii’s** Margins'
     Content = 'Hi, this is Xiaorui. 这里记录我的软件工程、AI 与学习笔记。'
 
   [[params.socialIcons]]
