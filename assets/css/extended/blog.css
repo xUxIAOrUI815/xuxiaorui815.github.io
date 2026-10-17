@@ -65,6 +65,14 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .header-nav .menu {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    white-space: normal;
+    line-height: 44px;
+    column-gap: 18px;
+  }
+
   .home-info {
     min-height: 260px;
   }

@@ -1,0 +1,53 @@
+{{- define "main" }}
+<article class="about-page">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+  </header>
+
+  {{- with .Params.profile }}
+  <section class="about-intro" aria-labelledby="about-name">
+    <div class="about-identity">
+      <div class="about-names">
+        <h2 id="about-name">{{ .name }}</h2>
+        {{- with .fullname }}<span class="about-full-name">{{ . }}</span>{{ end }}
+      </div>
+      {{- with .location }}<span class="about-location">{{ . }}</span>{{ end }}
+    </div>
+    {{- with .tagline }}<p class="about-tagline">{{ . }}</p>{{ end }}
+    <div class="about-copy">{{ $.Content }}</div>
+    {{- with .links }}
+    <ul class="about-links" aria-label="联系与主页">
+      {{- range . }}
+      <li><a href="{{ .url | safeURL }}">{{ .name }}</a></li>
+      {{- end }}
+    </ul>
+    {{- end }}
+  </section>
+  {{- end }}
+
+  {{- with .Params.education }}
+  <section class="about-section" aria-labelledby="about-education">
+    <h2 id="about-education">教育经历</h2>
+    {{ partial "about_timeline.html" . }}
+  </section>
+  {{- end }}
+
+  {{- with .Params.experience }}
+  <section class="about-section" aria-labelledby="about-experience">
+    <h2 id="about-experience">组织与经历</h2>
+    {{ partial "about_timeline.html" . }}
+  </section>
+  {{- end }}
+
+  {{- with .Params.interests }}
+  <section class="about-section" aria-labelledby="about-interests">
+    <h2 id="about-interests">正在探索</h2>
+    <ul class="about-interests">
+      {{- range . }}
+      <li><h3>{{ .title }}</h3><p>{{ .detail }}</p></li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+</article>
+{{- end }}

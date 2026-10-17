@@ -7,6 +7,7 @@ Xiaorui Xu 的个人博客。使用 **Hugo + PaperMod + GitHub Pages**，页面�
 - 网站：<https://xuxiaorui815.github.io/>
 - 内容：`content/posts/`
 - 配置：`hugo.toml`
+- 个人简介与经历：`content/about.md`
 - [写作与发布指南](docs/writing.md)
 
 ## 本地预览
@@ -47,9 +48,15 @@ node --test scripts/test_reading_progress.mjs
 
 ## 第一版内容与来源
 
-首页、归档、搜索、标签、FAQ、文章目录、代码复制、RSS、深浅色模式和移动端布局均已配置。开站说明与排版示例是本站新写的内容，没有复制 Lilian Weng 的文章或个人资料。
+首页、归档、搜索、标签、About、FAQ、文章目录、代码复制、RSS、深浅色模式和移动端布局均已配置。开站说明与排版示例是本站新写的内容，没有复制 Lilian Weng 的文章或个人资料。
 
-PaperMod 通过 Git 子模块固定版本，保留其 [MIT 许可证](themes/PaperMod/LICENSE)。本站的少量样式覆盖位于 `assets/css/extended/blog.css`，不直接修改主题。首页依次提供 GitHub、[CSDN 主页](https://blog.csdn.net/KRADDDD?type=blog)与 [RSS 订阅](https://xuxiaorui815.github.io/index.xml)入口；邮箱和独立浏览器写作入口尚未配置。
+PaperMod 通过 Git 子模块固定版本，保留其 [MIT 许可证](themes/PaperMod/LICENSE)。本站的少量样式覆盖位于 `assets/css/extended/`，不直接修改主题。首页依次提供 GitHub、[CSDN 主页](https://blog.csdn.net/KRADDDD?type=blog)与 [RSS 订阅](https://xuxiaorui815.github.io/index.xml)入口；About 页面另提供邮箱链接，独立浏览器写作入口尚未配置。
+
+## About 页面
+
+导航中的 About 位于 Tags 与 FAQ 之间。编辑 `content/about.md` 的正文和 front matter 即可维护简介、联系入口、教育、组织与经历、探索方向；时间线支持多条记录。布局位于 `layouts/about.html`，样式位于 `assets/css/extended/about.css`。
+
+当前资料来自用户确认可参考的 GitHub 主页（2026-10-17）。学校、年龄、职位和任职时间尚未提供，因此不展示这些字段。Ant Group 仅按主页所列组织展示，不视为已确认的任职经历。补齐资料后可更新 `education`、`experience` 条目及其 `period` 字段。About 不进入文章列表、搜索索引或 RSS，也不加载文章阅读进度组件。
 
 ## 咖啡行星标志与阅读进度
 

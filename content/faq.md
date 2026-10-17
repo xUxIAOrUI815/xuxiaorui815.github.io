@@ -11,7 +11,7 @@ hiddenInRss = true
 
 你好，我是 Xiaorui Xu。这是我的个人博客，用来整理软件工程、AI 和学习过程中的笔记。
 
-你可以在 [GitHub](https://github.com/xUxIAOrUI815) 找到我的项目。
+你可以在 [About](/about/) 认识我，或在 [GitHub](https://github.com/xUxIAOrUI815) 找到我的项目。
 
 ## 为什么叫 Ruii’s Margins？
 
