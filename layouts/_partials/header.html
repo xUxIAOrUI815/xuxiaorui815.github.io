@@ -1,10 +1,11 @@
-{{/* Based on the pinned PaperMod header (MIT); only the wordmark rendering is overridden. */}}
+{{/* Based on the pinned PaperMod header (MIT); custom brand icon and wordmark. */}}
 <header class="header">
     <nav class="header-nav">
         <div class="logo">
             {{- $label_text := (site.Params.label.text | default site.Title) }}
             {{- if site.Title }}
             <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
+                {{- with resources.Get "brand/coffee-planet.svg" }}{{ .Content | safeHTML }}{{ end -}}
                 {{- if site.Params.label.icon }}
                 {{- $img := resources.Get site.Params.label.icon }}
                 {{- if $img }}

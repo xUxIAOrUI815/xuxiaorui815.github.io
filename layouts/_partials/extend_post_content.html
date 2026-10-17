@@ -1,0 +1,23 @@
+{{- if and .IsPage (eq .Section "posts") .Content -}}
+<div id="reading-coffee" class="reading-coffee" role="progressbar" aria-label="正文阅读进度"
+     aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" title="根据正文滚动位置计算" hidden>
+  <svg width="32" height="32" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor"
+       stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <defs><clipPath id="reading-coffee-interior"><path d="M7 9h8v3a4 4 0 0 1-8 0Z"/></clipPath></defs>
+    <g clip-path="url(#reading-coffee-interior)" stroke="none">
+      <g class="reading-coffee-liquid"><rect x="7" y="9" width="8" height="8" fill="currentColor" fill-opacity=".3"/>
+        <path d="M7 9q2 .35 4 0t4 0" stroke="currentColor" stroke-width=".35" opacity=".55"/>
+      </g>
+    </g>
+    <path d="M6 8h10v4a5 5 0 0 1-10 0Z"/>
+    <path d="M16 9h2a2.5 2.5 0 0 1 0 5h-2"/>
+    <path d="M3 11C-2 20 18 25 21 15"/>
+    <circle cx="11" cy="3.5" r="1.1" fill="currentColor" stroke="none"/>
+  </svg>
+  <span class="reading-coffee-label" aria-hidden="true">正文阅读</span>
+  <span class="reading-coffee-value" aria-hidden="true">0%</span>
+</div>
+{{/* Keep the script with the article widget: PaperMod caches footers across pages. */}}
+{{- $script := resources.Get "js/reading-coffee.mjs" | js.Build (dict "targetPath" "assets/js/reading-coffee.js" "target" "es2018") | resources.Minify | fingerprint -}}
+<script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end -}}

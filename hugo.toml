@@ -62,11 +62,11 @@ buildExpired = false
     url = 'https://xuxiaorui815.github.io/index.xml'
 
   [params.assets]
-    favicon = '/favicon.svg'
-    favicon16x16 = '/favicon-16x16.png'
-    favicon32x32 = '/favicon-32x32.png'
-    apple_touch_icon = '/apple-touch-icon.png'
-    safari_pinned_tab = '/favicon.svg'
+    favicon = '/favicon.svg?v=coffee-planet'
+    favicon16x16 = '/favicon-16x16.png?v=coffee-planet'
+    favicon32x32 = '/favicon-32x32.png?v=coffee-planet'
+    apple_touch_icon = '/apple-touch-icon.png?v=coffee-planet'
+    safari_pinned_tab = '/favicon.svg?v=coffee-planet'
 
   [params.fuseOpts]
     isCaseSensitive = false

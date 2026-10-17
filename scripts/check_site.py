@@ -14,10 +14,13 @@ class Page(HTMLParser):
         super().__init__()
         self.ids = set()
         self.links = []
+        self.has_article_body = False
         self.feed(text)
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if "post-content" in attrs.get("class", "").split():
+            self.has_article_body = True
         if attrs.get("id"):
             self.ids.add(attrs["id"])
         for name in ("href", "src"):
@@ -34,6 +37,11 @@ def main():
     checked = 0
     for source, page in pages.items():
         relative = source.relative_to(ROOT).as_posix()
+        expected_progress = relative.startswith("posts/") and page.has_article_body
+        has_progress = "reading-coffee" in page.ids
+        has_progress_script = any("/assets/js/reading-coffee." in link for link in page.links)
+        if has_progress != expected_progress or has_progress_script != expected_progress:
+            errors.append(f"{relative}: article reading indicator/script missing or loaded outside an article")
         url = urljoin(SITE, relative.removesuffix("index.html"))
         for link in page.links:
             target = urlsplit(urljoin(url, link))

@@ -32,6 +32,7 @@ hugo server -D
 ```sh
 hugo --gc --minify --environment production
 python scripts/check_site.py
+node --test scripts/test_reading_progress.mjs
 ```
 
 `public/` 为生成文件，不提交到 Git。GitHub Actions 对分支推送和 PR 执行构建与链接检查；只有 `main` 会部署。Pages 的发布来源应为 **GitHub Actions**。
@@ -49,3 +50,11 @@ python scripts/check_site.py
 首页、归档、搜索、标签、FAQ、文章目录、代码复制、RSS、深浅色模式和移动端布局均已配置。开站说明与排版示例是本站新写的内容，没有复制 Lilian Weng 的文章或个人资料。
 
 PaperMod 通过 Git 子模块固定版本，保留其 [MIT 许可证](themes/PaperMod/LICENSE)。本站的少量样式覆盖位于 `assets/css/extended/blog.css`，不直接修改主题。首页依次提供 GitHub、[CSDN 主页](https://blog.csdn.net/KRADDDD?type=blog)与 [RSS 订阅](https://xuxiaorui815.github.io/index.xml)入口；邮箱和独立浏览器写作入口尚未配置。
+
+## 咖啡行星标志与阅读进度
+
+页头及浏览器标签页使用「咖啡行星」标志，液面为灰色，随深浅色主题适配。页头 SVG 源文件在 `assets/brand/coffee-planet.svg`，标签页和 Apple 图标在 `static/`。
+
+文章页的咖啡杯表示正文滚动进度：正文开始时满杯，最后一行进入视口时空杯。它不计时，也不把文章标题、目录、页脚算入阅读范围；一屏内能展示完整正文的短文章会直接显示读到文末。桌面浮标位于正文右侧，宽度不足 960px 时改为顶部小条，滚动进入正文后出现。关闭 JavaScript 时隐藏进度，文章仍正常显示；系统选择减少动态效果时不播放液面过渡。
+
+实现位于 `assets/js/reading-coffee.mjs`、`assets/css/extended/reading-coffee.css` 与 `layouts/_partials/extend_post_content.html` 模板钩子；主题文件没有修改。页边星和走神括号保存在 `assets/brand/reserved/`，暂不展示。
