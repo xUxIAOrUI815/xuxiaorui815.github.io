@@ -58,7 +58,7 @@ gh workflow run pages.yaml --ref main
 
 | 要修改什么 | 文件 |
 | --- | --- |
-| 名字、介绍、GitHub / RSS 链接、菜单 | `hugo.toml` |
+| 名字、介绍、GitHub / CSDN 链接、菜单 | `hugo.toml` |
 | 字体、间距、颜色 | `assets/css/extended/blog.css` |
 | FAQ | `content/faq.md` |
 | 文章元信息展示 | `layouts/_partials/post_meta.html` |

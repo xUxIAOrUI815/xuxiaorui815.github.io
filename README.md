@@ -48,4 +48,4 @@ python scripts/check_site.py
 
 首页、归档、搜索、标签、FAQ、文章目录、代码复制、RSS、深浅色模式和移动端布局均已配置。开站说明与排版示例是本站新写的内容，没有复制 Lilian Weng 的文章或个人资料。
 
-PaperMod 通过 Git 子模块固定版本，保留其 [MIT 许可证](themes/PaperMod/LICENSE)。本站的少量样式覆盖位于 `assets/css/extended/blog.css`，不直接修改主题。邮件、CSDN 和浏览器写作入口尚未配置。
+PaperMod 通过 Git 子模块固定版本，保留其 [MIT 许可证](themes/PaperMod/LICENSE)。本站的少量样式覆盖位于 `assets/css/extended/blog.css`，不直接修改主题。首页提供 GitHub 与 [CSDN 主页](https://blog.csdn.net/KRADDDD?type=blog)入口；邮箱和独立浏览器写作入口尚未配置。

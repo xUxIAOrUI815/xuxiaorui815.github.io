@@ -30,6 +30,17 @@ body {
   margin: 0;
 }
 
+.social-icons a {
+  align-items: center;
+  vertical-align: middle;
+}
+
+.social-icons .social-label {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
 .post-entry:hover,
 .post-entry:focus-within {
   transform: none;

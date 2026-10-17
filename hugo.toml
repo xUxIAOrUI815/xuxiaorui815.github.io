@@ -53,9 +53,9 @@ buildExpired = false
     title = 'GitHub'
     url = 'https://github.com/xUxIAOrUI815'
   [[params.socialIcons]]
-    name = 'rss'
-    title = 'RSS'
-    url = '/index.xml'
+    name = 'csdn'
+    title = 'CSDN 主页'
+    url = 'https://blog.csdn.net/KRADDDD?type=blog'
 
   [params.assets]
     favicon = '/favicon.svg'
