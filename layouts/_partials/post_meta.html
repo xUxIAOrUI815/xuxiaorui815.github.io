@@ -1,11 +1,11 @@
 {{- if not .Date.IsZero -}}
-<span title="{{ .Date }}">Date: {{ .Date.Format (default "January 2, 2006" site.Params.DateFormat) }}</span>
+<span class="post-meta-date" title="{{ .Date }}">Date: {{ .Date.Format (default "January 2, 2006" site.Params.DateFormat) }}</span>
 {{- end -}}
 {{- if (.Param "ShowReadingTime") }}
-<span> | Estimated Reading Time: {{ .ReadingTime }} min</span>
+<span class="post-meta-reading"><span class="post-meta-separator"> | </span><span class="post-reading-time">Estimated Reading Time: {{ .ReadingTime }} min</span></span>
 {{- end -}}
 {{- if not (.Param "hideAuthor") -}}
   {{- with (partial "author.html" .) }}
-<span> | Author: {{ . }}</span>
+<span class="post-meta-author"> | Author: {{ . }}</span>
   {{- end -}}
 {{- end -}}

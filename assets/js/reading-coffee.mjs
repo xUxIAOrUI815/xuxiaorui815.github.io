@@ -10,25 +10,34 @@ export function readingProgress(top, bottom, viewportHeight, inset = 0) {
 function initReadingCoffee() {
   const widget = document.getElementById('reading-coffee');
   const content = document.querySelector('.post-single .post-content');
-  if (!widget || !content || !content.textContent.trim()) return;
+  const header = document.querySelector('.post-single .post-header');
+  if (!widget || !content || !header || !content.textContent.trim()) return;
+
+  // Move the same cup into the article metadata. The slot retains its size when
+  // the cup becomes a fixed reading bar, preventing header reflow at the boundary.
+  const slot = document.createElement('span');
+  slot.className = 'reading-coffee-slot';
+  const anchor = header.querySelector('.post-reading-time') || header.querySelector('.post-meta') || header;
+  anchor.prepend(slot);
+  slot.append(widget);
+  widget.hidden = false;
 
   const liquid = widget.querySelector('.reading-coffee-liquid');
   const value = widget.querySelector('.reading-coffee-value');
-  const mobile = window.matchMedia('(max-width: 959px)');
   let scheduled = false;
 
   function update() {
     scheduled = false;
+    const pinned = header.getBoundingClientRect().bottom <= 0;
+    widget.toggleAttribute('data-stuck', pinned);
     const bounds = content.getBoundingClientRect();
-    const inset = mobile.matches ? 44 : 0;
+    const inset = pinned ? widget.getBoundingClientRect().height : 0;
     const progress = readingProgress(bounds.top, bounds.bottom, window.innerHeight, inset);
     const percent = Math.floor(progress * 100);
     liquid.style.transform = `translateY(${7 * progress}px)`;
-    value.textContent = `${percent}%`;
+    value.textContent = `已读 ${percent}%`;
     widget.setAttribute('aria-valuenow', String(percent));
     widget.setAttribute('aria-valuetext', percent === 100 ? '已到达文末，这杯读完了' : `正文阅读进度 ${percent}%`);
-    widget.toggleAttribute('data-mobile-active', bounds.top <= inset);
-    widget.hidden = false;
   }
 
   function schedule() {

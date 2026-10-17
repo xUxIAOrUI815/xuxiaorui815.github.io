@@ -16,7 +16,7 @@ test('reaching the final body line finishes before the site footer', () => {
   assert.equal(readingProgress(-900, 300, 800), 1);
 });
 
-test('the mobile toolbar is excluded from usable reading space', () => {
+test('the pinned reading bar is excluded from usable reading space', () => {
   assert.equal(readingProgress(44, 1244, 800, 44), 0);
   assert.equal(readingProgress(-178, 1022, 800, 44), 0.5);
   assert.equal(readingProgress(-400, 800, 800, 44), 1);

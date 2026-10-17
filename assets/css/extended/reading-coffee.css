@@ -7,47 +7,86 @@
 
 .reading-coffee[hidden] { display: none; }
 
-.reading-coffee {
-  position: fixed;
-  right: max(24px, calc((100vw - 720px) / 2 - 100px));
-  bottom: 8rem;
-  z-index: 98;
-  display: flex;
-  flex-direction: column;
+.post-header .post-reading-time {
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 10px 12px;
+  min-height: 32px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.reading-coffee-slot {
+  display: inline-flex;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  margin-inline-end: 6px;
+  vertical-align: middle;
+}
+
+.reading-coffee {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
   color: var(--primary);
-  background: var(--theme);
-  border: 1px solid var(--border);
-  border-radius: 12px;
   font-size: 12px;
   line-height: 1.4;
   pointer-events: none;
 }
 
+.reading-coffee-inner { display: flex; align-items: center; min-width: 0; }
 .reading-coffee svg { display: block; flex-shrink: 0; }
-.reading-coffee-label { display: none; }
-.reading-coffee-value { font-variant-numeric: tabular-nums; }
+.reading-coffee-title,
+.reading-coffee-value { display: none; }
 .reading-coffee.is-ready .reading-coffee-liquid { transition: transform .18s ease-out; }
 
-/* Keep the floating cup outside the text column; use a top bar on narrow screens. */
-@media (max-width: 959px) {
-  .reading-coffee {
-    inset: 0 0 auto;
-    height: 44px;
-    flex-direction: row;
-    justify-content: center;
-    gap: 8px;
-    padding: 6px 16px;
-    border: 0;
-    border-bottom: 1px solid var(--border);
-    border-radius: 0;
-  }
-  .reading-coffee:not([data-mobile-active]) { visibility: hidden; }
-  .reading-coffee svg { width: 28px; height: 28px; }
-  .reading-coffee-label { display: inline; }
-  .post-content :is(h1, h2, h3, h4, h5, h6) { scroll-margin-top: 60px; }
+.reading-coffee[data-stuck] {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 98;
+  width: auto;
+  height: 44px;
+  background: var(--theme);
+  border-bottom: 1px solid var(--border);
+}
+
+.reading-coffee[data-stuck] .reading-coffee-inner {
+  width: 100%;
+  max-width: calc(var(--main-width) + var(--gap) * 2);
+  height: 100%;
+  margin-inline: auto;
+  padding-inline: var(--gap);
+  gap: 12px;
+}
+
+.reading-coffee[data-stuck] .reading-coffee-title {
+  display: block;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.reading-coffee[data-stuck] .reading-coffee-value {
+  display: block;
+  flex-shrink: 0;
+  color: var(--secondary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 64px;
+  text-align: end;
+}
+
+.post-single .post-content :is(h1, h2, h3, h4, h5, h6) { scroll-margin-top: 60px; }
+
+@media (max-width: 600px) {
+  .post-header .post-meta { display: flex; flex-wrap: wrap; column-gap: .35em; }
+  .post-header .post-meta-author { white-space: nowrap; }
+  .post-header .post-meta-reading { order: 1; flex-basis: 100%; }
+  .post-header .post-meta-reading > .post-meta-separator { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -55,5 +94,6 @@
 }
 
 @media print {
-  .reading-coffee { display: none; }
+  .reading-coffee,
+  .reading-coffee-slot { display: none; }
 }
